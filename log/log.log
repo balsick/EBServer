@@ -1,0 +1,24 @@
+ott 08, 2015 1:59:15 PM cc_activity_server.CCActivityServer main
+INFORMAZIONI: Server started
+ott 08, 2015 1:59:20 PM cc_activity_server.CCActivityServer main
+INFORMAZIONI: 1	Connection accepted by /127.0.0.1:65175
+ott 08, 2015 1:59:20 PM cc_activity_server.CommunicationThread run
+INFORMAZIONI: Started thread
+ott 08, 2015 1:59:20 PM cc_activity_server.CommunicationThread run
+INFORMAZIONI: Input from client: Ciao
+ott 08, 2015 1:59:24 PM cc_activity_server.CommunicationThread run
+INFORMAZIONI: Input from client: request_data_start
+ott 08, 2015 1:59:24 PM cc_activity_server.DBManager select
+INFORMAZIONI: Executing query:
+select * from card_movements
+Source:	127.0.0.1
+ott 08, 2015 1:59:28 PM cc_activity_server.CommunicationThread run
+INFORMAZIONI: Closing socket
+ott 08, 2015 2:06:43 PM cc_activity_server.CCActivityServer main
+INFORMAZIONI: 3	Connection accepted by /127.0.0.1:65268
+ott 08, 2015 2:06:43 PM cc_activity_server.CommunicationThread run
+INFORMAZIONI: Started thread
+ott 08, 2015 2:06:43 PM cc_activity_server.CommunicationThread run
+INFORMAZIONI: Input from client: Ciao
+ott 08, 2015 6:16:55 PM cc_activity_server.CommunicationThread run
+INFORMAZIONI: Closing socket
