@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.util.logging.Logger;
 
 import com.balsick.tools.communication.ClientServerDBResult;
 import com.balsick.tools.communication.ClientServerDBResultRow;
@@ -25,7 +24,7 @@ public class DBManager {
 		if (connection == null)
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
-				connection = DriverManager.getConnection("jdbc:mysql://localhost/ebdatabase?"+"user=ebdatabase&password=ebdatabase");
+				connection = DriverManager.getConnection("jdbc:mysql://localhost/"+Info.DBName+"?"+"user="+Info.DBid+"&password="+Info.DBpassword);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			} catch (ClassNotFoundException e) {

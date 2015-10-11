@@ -2,8 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/progetti/java-lib/ebtools.jar"/>
-	<classpathentry kind="lib" path="D:/progetti/java-lib/mysql-connector-java-5.1.36-bin.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/EBTools"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.36.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
