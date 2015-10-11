@@ -6,7 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.util.logging.Logger;
+import java.util.List;
+import java.util.Map;
 
 import com.balsick.tools.communication.ClientServerDBResult;
 import com.balsick.tools.communication.ClientServerDBResultRow;
@@ -25,7 +26,7 @@ public class DBManager {
 		if (connection == null)
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
-				connection = DriverManager.getConnection("jdbc:mysql://localhost/ebdatabase?"+"user=ebdatabase&password=ebdatabase");
+				connection = DriverManager.getConnection("jdbc:mysql://localhost/"+Info.DBName+"?"+"user="+Info.DBid+"&password="+Info.DBpassword);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			} catch (ClassNotFoundException e) {
@@ -54,11 +55,11 @@ public class DBManager {
 		return rs;
 	}
 	
-	public static ClientServerDBResult select(String[] columns, String table, String[] criteria, String[] groupby, String[] orderby) throws Exception {
+	public static ClientServerDBResult select(List<String> columns, List<String> table, List<String> criteria, List<String> groupby, List<String> orderby) throws Exception {
 		return select(columns, table, criteria, groupby, orderby, null);
 	}
 	
-	public static ClientServerDBResult select(String[] columns, String table, String[] criteria, String[] groupby, String[] orderby, Object source) throws Exception {
+	public static ClientServerDBResult select(List<String> columns, List<String> table, List<String> criteria, List<String> groupby, List<String> orderby, Object source) throws Exception {
 		if (table == null)
 			throw new Exception("missing table name");
 		String query = "select ";
@@ -69,7 +70,11 @@ public class DBManager {
 			}
 			query = query.substring(0, query.length()-separator.length());
 		} else query += "*";
-		query += " from "+table;
+//		query += " from "+table;
+		for (String c : table) {
+			query += c + separator;
+		}
+		query = query.substring(0, query.length()-separator.length());
 		separator = " and ";
 		if (criteria != null) {
 			query += " where ";
@@ -95,9 +100,15 @@ public class DBManager {
 		}
 		return select(query, source);
 	}
+	
 	public static ClientServerDBResult select(String query) {
 		return select(query, null);
 	}
+	
+	public static ClientServerDBResult select(Map<String, List<String>> args, Object source) throws Exception {
+		return select(args.get("columns"), args.get("table"), args.get("criteria"), args.get("groupby"), args.get("orderby"), source);
+	}
+	
 	public static ClientServerDBResult select(String query, Object source) {
 //		List<HashMap<String, Object>> results = new ArrayList<>();
 		String info = "Executing query:\n"+query;

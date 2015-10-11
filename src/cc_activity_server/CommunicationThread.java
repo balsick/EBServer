@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 import java.util.logging.Logger;
 
 import com.balsick.tools.communication.ClientServerDBResult;
@@ -85,6 +88,7 @@ public class CommunicationThread extends Thread {
 
 	private void manageDataRequest(BufferedReader in) {
 		String line;
+		HashMap<String, List<String>> args = new HashMap<>();
 		String[] columns = null;
 		String table = null;
 		String[] criteria = null;
@@ -93,17 +97,22 @@ public class CommunicationThread extends Thread {
 		try {
 			while ((line = in.readLine()) != null && !line.equals("request_data_end")) {
 				if (line.matches("^columns=\\{.*\\}"))
-					columns = GeneralUtils.translate(line, "columns");
+					args.put("columns", GeneralUtils.translate(line, "columns"));
 				else if (line.matches("^table=\\{?.*\\}?"))
-					table = GeneralUtils.translate(line, "table")[0];
+					args.put("table", GeneralUtils.translate(line, "table"));
 				else if (line.matches("^criteria=\\{.*\\}"))
-					criteria = GeneralUtils.translate(line, "criteria");
+					args.put("criteria", GeneralUtils.translate(line, "criteria"));
 				else if (line.matches("^groupby=\\{.*\\}"))
-					groupby = GeneralUtils.translate(line, "groupby");
+					args.put("groupby", GeneralUtils.translate(line, "groupby"));
 				else if (line.matches("^orderby=\\{.*\\}"))
-					orderby = GeneralUtils.translate(line, "orderby");
+					args.put("orderby", GeneralUtils.translate(line, "orderby"));
 			}
-			ClientServerDBResult result = DBManager.select(columns, table, criteria, groupby, orderby, this);
+		} catch (IOException ex){
+			
+		}
+		try {
+			ClientServerDBResult result = DBManager.select(args, this);
+//			ClientServerDBResult result = DBManager.select(columns, table, criteria, groupby, orderby, this);
 			ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
 			outputStream.flush();
 			outputStream.writeObject(result);
