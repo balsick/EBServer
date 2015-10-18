@@ -11,6 +11,8 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+import cc_activity_server.http.EBHTTPServer;
+
 
 public class CCActivityServer {
 	
@@ -34,6 +36,7 @@ public class CCActivityServer {
 				e.printStackTrace();
 			}
 		}
+		EBHTTPServer serverHTTP;
 		try (
 				ServerSocket serverSocket = new ServerSocket(port);
 				){
@@ -46,6 +49,8 @@ public class CCActivityServer {
 			logger.info("Server started");
 			System.out.println("Server started");
 //			List<Socket> clientSockets = new ArrayList<>();
+			serverHTTP = new EBHTTPServer();
+			serverHTTP.start();
 			while (true) {
 				Socket clientSocket = serverSocket.accept();
 				System.out.println((i++) + "\tConnection accepted by " + clientSocket.getRemoteSocketAddress());
