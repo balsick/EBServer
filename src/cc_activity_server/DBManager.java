@@ -11,7 +11,10 @@ import java.util.Map;
 
 import com.balsick.tools.communication.ClientServerDBResult;
 import com.balsick.tools.communication.ClientServerDBResultRow;
+import com.balsick.tools.communication.ClientServerMessageResult;
+import com.balsick.tools.communication.ClientServerResult;
 import com.balsick.tools.communication.ColumnStructure;
+import com.balsick.tools.communication.JSonParser;
 
 public class DBManager {
 	
@@ -55,11 +58,11 @@ public class DBManager {
 		return rs;
 	}
 	
-	public static ClientServerDBResult select(List<String> columns, List<String> table, List<String> criteria, List<String> groupby, List<String> orderby) throws Exception {
+	public static ClientServerResult select(List<String> columns, List<String> table, List<String> criteria, List<String> groupby, List<String> orderby) throws Exception {
 		return select(columns, table, criteria, groupby, orderby, null);
 	}
 	
-	public static ClientServerDBResult select(List<String> columns, List<String> table, List<String> criteria, List<String> groupby, List<String> orderby, Object source) throws Exception {
+	public static ClientServerResult select(List<String> columns, List<String> table, List<String> criteria, List<String> groupby, List<String> orderby, Object source) throws Exception {
 		if (table == null)
 			throw new Exception("missing table name");
 		String query = "select ";
@@ -71,6 +74,7 @@ public class DBManager {
 			query = query.substring(0, query.length()-separator.length());
 		} else query += "*";
 //		query += " from "+table;
+		query += " from ";
 		for (String c : table) {
 			query += c + separator;
 		}
@@ -101,15 +105,15 @@ public class DBManager {
 		return select(query, source);
 	}
 	
-	public static ClientServerDBResult select(String query) {
+	public static ClientServerResult select(String query) {
 		return select(query, null);
 	}
 	
-	public static ClientServerDBResult select(Map<String, List<String>> args, Object source) throws Exception {
-		return select(args.get("columns"), args.get("table"), args.get("criteria"), args.get("groupby"), args.get("orderby"), source);
+	public static ClientServerResult select(Map<String, List<String>> args, Object source) throws Exception {
+		return select(args.get("columns"), args.get("tables"), args.get("criteria"), args.get("groupby"), args.get("orderby"), source);
 	}
 	
-	public static ClientServerDBResult select(String query, Object source) {
+	public static ClientServerResult select(String query, Object source) {
 //		List<HashMap<String, Object>> results = new ArrayList<>();
 		String info = "Executing query:\n"+query;
 		if (source instanceof CommunicationThread) {
@@ -117,19 +121,19 @@ public class DBManager {
 		}
 		System.out.println(info);
 		CCActivityServer.logger.info(info);
-		ClientServerDBResult result = new ClientServerDBResult();
+		ClientServerResult result = null;
 		try (
 				PreparedStatement preparedStatement = getCurrent().getConnection().prepareStatement(query);
 				ResultSet rs = preparedStatement.executeQuery();
 				){
-			
+			result = new ClientServerDBResult();
 			ResultSetMetaData meta = rs.getMetaData();
 			int l = meta.getColumnCount();
 			for (int i = 1; i <= l; i++) {
 				String columnlabel = meta.getColumnName(i);
 				String type = meta.getColumnTypeName(i);
 				ColumnStructure cs = new ColumnStructure(columnlabel, type+"");
-				result.addColumn(cs);
+				((ClientServerDBResult)result).addColumn(cs);
 			}
 			while (rs.next()) {
 				ClientServerDBResultRow row = new ClientServerDBResultRow();
@@ -137,15 +141,19 @@ public class DBManager {
 					Object obj = rs.getObject(i);
 					row.put(meta.getColumnName(i), obj);
 				}
-				result.addRow(row);
+				((ClientServerDBResult)result).addRow(row);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			return null;
+			result = new ClientServerMessageResult(ClientServerResult.RESULTFAIL, "sql error:\n"+e.getMessage());
+//			return result;
 		} catch (NullPointerException e) {
 			e.printStackTrace();
-			return null;
+			result = new ClientServerMessageResult(ClientServerResult.RESULTFAIL, "error:\n"+e.getMessage());
+//			return result;
 		}
+		String json = JSonParser.getJSon(result);
+		System.out.println(json);
 		return result;
 	}
 	
