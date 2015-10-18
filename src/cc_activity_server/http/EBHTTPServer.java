@@ -11,13 +11,16 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.Executors;
 
 import com.balsick.tools.communication.ClientServerDBResult;
+import com.balsick.tools.communication.JSonParser;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
+import cc_activity_server.CCActivityServer;
 import cc_activity_server.DBManager;
 
 public class EBHTTPServer extends Thread {
@@ -38,17 +41,20 @@ public class EBHTTPServer extends Thread {
     private static final String METHOD_GET = "GET";
     private static final String METHOD_OPTIONS = "OPTIONS";
     private static final String ALLOWED_METHODS = METHOD_GET + "," + METHOD_OPTIONS;
-
+    
     public void start() {
         HttpServer server;
 		try {
 			server = HttpServer.create(new InetSocketAddress(HOSTNAME, PORT), BACKLOG);
+			server.setExecutor(Executors.newFixedThreadPool(10));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return;
 		}
-        server.createContext("/func1", new HttpHandler() {
+		System.out.println("HTTP Server started");
+		CCActivityServer.logger.info("HTTP Server started");
+        server.createContext("/selectTest", new HttpHandler() {
         	@Override
         	public void handle(HttpExchange he)  throws IOException {
         		try {
@@ -64,7 +70,7 @@ public class EBHTTPServer extends Thread {
 								result = null;
 								e.printStackTrace();
 							}
-	                        final String responseBody = result.getJSon();
+	                        final String responseBody = JSonParser.getJSon(result);
 	                        headers.set(HEADER_CONTENT_TYPE, String.format("application/json; charset=%s", CHARSET));
 	                        final byte[] rawResponseBody = responseBody.getBytes(CHARSET);
 	                        he.sendResponseHeaders(STATUS_OK, rawResponseBody.length);
