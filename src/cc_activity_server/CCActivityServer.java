@@ -57,7 +57,6 @@ public class CCActivityServer {
 				logger.info((i++) + "\tConnection accepted by " + clientSocket.getRemoteSocketAddress());
 //				clientSockets.add(clientSocket);
 				CommunicationThread thread = new CommunicationThread(clientSocket);
-				thread.setLog(logger);
 				thread.start();
 			}
 		}catch (Exception ex) {

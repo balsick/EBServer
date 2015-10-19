@@ -1,24 +1,20 @@
-ott 08, 2015 1:59:15 PM cc_activity_server.CCActivityServer main
+ott 19, 2015 12:22:19 AM cc_activity_server.CCActivityServer main
 INFORMAZIONI: Server started
-ott 08, 2015 1:59:20 PM cc_activity_server.CCActivityServer main
-INFORMAZIONI: 1	Connection accepted by /127.0.0.1:65175
-ott 08, 2015 1:59:20 PM cc_activity_server.CommunicationThread run
-INFORMAZIONI: Started thread
-ott 08, 2015 1:59:20 PM cc_activity_server.CommunicationThread run
-INFORMAZIONI: Input from client: Ciao
-ott 08, 2015 1:59:24 PM cc_activity_server.CommunicationThread run
-INFORMAZIONI: Input from client: request_data_start
-ott 08, 2015 1:59:24 PM cc_activity_server.DBManager select
+ott 19, 2015 12:22:19 AM cc_activity_server.http.EBHTTPServer start
+INFORMAZIONI: HTTP Server started
+ott 19, 2015 12:22:22 AM cc_activity_server.http.EBHTTPServer handleEvent
+INFORMAZIONI: received something
+ott 19, 2015 12:22:22 AM cc_activity_server.http.EBHTTPServer handleEvent
+INFORMAZIONI: GET
+ott 19, 2015 12:22:22 AM cc_activity_server.http.EBHTTPServer handleEvent
+INFORMAZIONI: Chiave: tables
+valori:
+ott 19, 2015 12:22:22 AM cc_activity_server.http.EBHTTPServer handleEvent
+INFORMAZIONI: card_activity
+ott 19, 2015 12:22:22 AM cc_activity_server.http.EBHTTPServer handleEvent
+INFORMAZIONI: /selectTest
+ott 19, 2015 12:22:22 AM cc_activity_server.DBManager select
 INFORMAZIONI: Executing query:
-select * from card_movements
-Source:	127.0.0.1
-ott 08, 2015 1:59:28 PM cc_activity_server.CommunicationThread run
-INFORMAZIONI: Closing socket
-ott 08, 2015 2:06:43 PM cc_activity_server.CCActivityServer main
-INFORMAZIONI: 3	Connection accepted by /127.0.0.1:65268
-ott 08, 2015 2:06:43 PM cc_activity_server.CommunicationThread run
-INFORMAZIONI: Started thread
-ott 08, 2015 2:06:43 PM cc_activity_server.CommunicationThread run
-INFORMAZIONI: Input from client: Ciao
-ott 08, 2015 6:16:55 PM cc_activity_server.CommunicationThread run
-INFORMAZIONI: Closing socket
+select * from card_activity
+ott 19, 2015 12:22:22 AM cc_activity_server.http.EBHTTPServer handleEvent
+INFORMAZIONI: {"columns":[{"columnType":"INT","___json_type___":"columnstructure","name":"id"},{"columnType":"DATE","___json_type___":"columnstructure","name":"data_operazione"},{"columnType":"DATE","___json_type___":"columnstructure","name":"data_contabile"},{"columnType":"VARCHAR","___json_type___":"columnstructure","name":"descrizione"},{"columnType":"DOUBLE","___json_type___":"columnstructure","name":"importo"},{"columnType":"VARCHAR","___json_type___":"columnstructure","name":"tipo"},{"columnType":"VARCHAR","___json_type___":"columnstructure","name":"utente"},{"columnType":"DATE","___json_type___":"columnstructure","name":"data_inserimento"}],"___json_type___":"clientserverdbresult","rows":{"0":{"values":{"utente":"EBA","descrizione":"Comprata tua mamma","tipo":"pay","data_contabile":"2015-10-10","importo":100.0,"data_operazione":"2015-10-09","id":0,"data_inserimento":"2015-10-08"},"___json_type___":"clientserverdbresultrow"},"1":{"values":{"utente":"EBA","descrizione":"Comprata tua mamma","tipo":"pay","data_contabile":"2015-10-10","importo":100.0,"data_operazione":"2015-10-09","id":1,"data_inserimento":"2015-10-08"},"___json_type___":"clientserverdbresultrow"},"2":{"values":{"utente":"EBA","descrizione":"Comprato amazon","tipo":"pay","data_contabile":"2015-10-10","importo":100.0,"data_operazione":"2015-10-09","id":2,"data_inserimento":"2015-10-08"},"___json_type___":"clientserverdbresultrow"},"3":{"values":{"utente":"EBA","descrizione":"Comprato amazon","tipo":"pay","data_contabile":"2015-10-09","importo":85.0,"data_operazione":"2015-10-07","id":3,"data_inserimento":"2015-10-08"},"___json_type___":"clientserverdbresultrow"},"4":{"values":{"utente":"EBA","descrizione":"Venduto ebay","tipo":"cash","data_contabile":"2015-10-06","importo":115.0,"data_operazione":"2015-10-05","id":4,"data_inserimento":"2015-10-08"},"___json_type___":"clientserverdbresultrow"}},"resulttype":"success"}
