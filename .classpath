@@ -4,5 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/EBTools"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.36.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/StealingFromGazzetta"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
