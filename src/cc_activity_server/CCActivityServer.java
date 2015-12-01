@@ -56,10 +56,10 @@ public class CCActivityServer {
 				System.out.println((i++) + "\tConnection accepted by " + clientSocket.getRemoteSocketAddress());
 				logger.info((i++) + "\tConnection accepted by " + clientSocket.getRemoteSocketAddress());
 //				clientSockets.add(clientSocket);
-				CommunicationThread thread = new CommunicationThread(clientSocket);
-				thread.start();
+				new CommunicationThread(clientSocket).start();
 			}
-		}catch (Exception ex) {
+		} catch (Exception ex) {
+			logger.info("Server can't start");
 			ex.printStackTrace(System.err);
 		}
 	}
