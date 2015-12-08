@@ -82,6 +82,7 @@ public class EBHTTPServer extends Thread {
 				}
 				ClientServerResult result;
 				CCActivityServer.logger.info(he.getHttpContext().getPath());
+				
 				switch (he.getHttpContext().getPath()) {
 				case "/selectTest":
 					try {
@@ -96,10 +97,11 @@ public class EBHTTPServer extends Thread {
 					System.out.println("parsing\t" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date()));
 					fp.parse();
 					System.out.println("parsed\t" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date()));
-					List<FootballPlayer> players = fp.getPlayers(requestParameters);
+//					List<FootballPlayer> players = fp.getPlayers(requestParameters);
+					Object players = fp.getPlayers(requestParameters);
 					if (players != null)
 						{
-						players.forEach(System.out::println);
+//						players.keySet().forEach(System.out::println);
 						try {
 							result = ClientServerGenericResult.createResult(players);
 						} catch (IllegalArgumentException ex) {
@@ -148,7 +150,7 @@ public class EBHTTPServer extends Thread {
 				final String[] requestParameter = rawRequestParameter.split("=", 2);
 				final String requestParameterName = decodeUrlComponent(requestParameter[0]);
 				List<String> parameters = new ArrayList<>();
-				for (final String value : requestParameter[1].split("[+]", -1)) {
+				for (final String value : requestParameter[1].split("[,]", -1)) {
 					System.out.println("value = "+value);
 					final String requestParameterValue = decodeUrlComponent(value);
 	//				final String[] requestParameterValues = requestParameterValue.split("|");
