@@ -1,20 +1,2284 @@
-ott 19, 2015 12:22:19 AM cc_activity_server.CCActivityServer main
+dic 10, 2015 8:32:27 PM cc_activity_server.CCActivityServer main
 INFORMAZIONI: Server started
-ott 19, 2015 12:22:19 AM cc_activity_server.http.EBHTTPServer start
+dic 10, 2015 8:32:27 PM cc_activity_server.http.EBHTTPServer start
 INFORMAZIONI: HTTP Server started
-ott 19, 2015 12:22:22 AM cc_activity_server.http.EBHTTPServer handleEvent
+dic 10, 2015 8:32:29 PM cc_activity_server.http.EBHTTPServer handleEvent
 INFORMAZIONI: received something
-ott 19, 2015 12:22:22 AM cc_activity_server.http.EBHTTPServer handleEvent
+dic 10, 2015 8:32:29 PM cc_activity_server.http.EBHTTPServer handleEvent
 INFORMAZIONI: GET
-ott 19, 2015 12:22:22 AM cc_activity_server.http.EBHTTPServer handleEvent
-INFORMAZIONI: Chiave: tables
+dic 10, 2015 8:32:29 PM cc_activity_server.http.EBHTTPServer handleEvent
+INFORMAZIONI: Chiave: options
 valori:
-ott 19, 2015 12:22:22 AM cc_activity_server.http.EBHTTPServer handleEvent
-INFORMAZIONI: card_activity
-ott 19, 2015 12:22:22 AM cc_activity_server.http.EBHTTPServer handleEvent
-INFORMAZIONI: /selectTest
-ott 19, 2015 12:22:22 AM cc_activity_server.DBManager select
-INFORMAZIONI: Executing query:
-select * from card_activity
-ott 19, 2015 12:22:22 AM cc_activity_server.http.EBHTTPServer handleEvent
-INFORMAZIONI: {"columns":[{"columnType":"INT","___json_type___":"columnstructure","name":"id"},{"columnType":"DATE","___json_type___":"columnstructure","name":"data_operazione"},{"columnType":"DATE","___json_type___":"columnstructure","name":"data_contabile"},{"columnType":"VARCHAR","___json_type___":"columnstructure","name":"descrizione"},{"columnType":"DOUBLE","___json_type___":"columnstructure","name":"importo"},{"columnType":"VARCHAR","___json_type___":"columnstructure","name":"tipo"},{"columnType":"VARCHAR","___json_type___":"columnstructure","name":"utente"},{"columnType":"DATE","___json_type___":"columnstructure","name":"data_inserimento"}],"___json_type___":"clientserverdbresult","rows":{"0":{"values":{"utente":"EBA","descrizione":"Comprata tua mamma","tipo":"pay","data_contabile":"2015-10-10","importo":100.0,"data_operazione":"2015-10-09","id":0,"data_inserimento":"2015-10-08"},"___json_type___":"clientserverdbresultrow"},"1":{"values":{"utente":"EBA","descrizione":"Comprata tua mamma","tipo":"pay","data_contabile":"2015-10-10","importo":100.0,"data_operazione":"2015-10-09","id":1,"data_inserimento":"2015-10-08"},"___json_type___":"clientserverdbresultrow"},"2":{"values":{"utente":"EBA","descrizione":"Comprato amazon","tipo":"pay","data_contabile":"2015-10-10","importo":100.0,"data_operazione":"2015-10-09","id":2,"data_inserimento":"2015-10-08"},"___json_type___":"clientserverdbresultrow"},"3":{"values":{"utente":"EBA","descrizione":"Comprato amazon","tipo":"pay","data_contabile":"2015-10-09","importo":85.0,"data_operazione":"2015-10-07","id":3,"data_inserimento":"2015-10-08"},"___json_type___":"clientserverdbresultrow"},"4":{"values":{"utente":"EBA","descrizione":"Venduto ebay","tipo":"cash","data_contabile":"2015-10-06","importo":115.0,"data_operazione":"2015-10-05","id":4,"data_inserimento":"2015-10-08"},"___json_type___":"clientserverdbresultrow"}},"resulttype":"success"}
+dic 10, 2015 8:32:29 PM cc_activity_server.http.EBHTTPServer handleEvent
+INFORMAZIONI: list
+dic 10, 2015 8:32:29 PM cc_activity_server.http.EBHTTPServer handleEvent
+INFORMAZIONI: /api/public/fantaplayers
+dic 10, 2015 8:32:29 PM cc_activity_server.http.EBHTTPServer handleEvent
+INFORMAZIONI: {
+	"result": [{
+		"vsteam": "juventus",
+		"player": "BLASZCZYKOWSKI",
+		"status": "unavailable"
+	},{
+		"vsteam": "bologna",
+		"player": "IZZO",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "DA COSTA",
+		"status": "bench"
+	},{
+		"vsteam": "bologna",
+		"player": "BURDISSO",
+		"status": "playing"
+	},{
+		"vsteam": "roma",
+		"player": "REINA",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "ACQUAFRESCA",
+		"status": "bench"
+	},{
+		"vsteam": "inter",
+		"player": "DOMIZZI",
+		"status": "playing"
+	},{
+		"vsteam": "udinese",
+		"player": "POPA",
+		"status": "unavailable"
+	},{
+		"vsteam": "udinese",
+		"player": "VIDIC",
+		"status": "unavailable"
+	},{
+		"vsteam": "bologna",
+		"player": "CAPEL",
+		"status": "bench"
+	},{
+		"vsteam": "udinese",
+		"player": "PERISIC",
+		"status": "bench"
+	},{
+		"vsteam": "bologna",
+		"player": "LAZOVIC",
+		"status": "playing"
+	},{
+		"vsteam": "carpi",
+		"player": "SAPONARA",
+		"status": "playing"
+	},{
+		"vsteam": "verona",
+		"player": "SUSO",
+		"status": "bench"
+	},{
+		"vsteam": "juventus",
+		"player": "ALONSO",
+		"status": "playing"
+	},{
+		"vsteam": "fiorentina",
+		"player": "BUFFON",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "CASSINI",
+		"status": "bench"
+	},{
+		"vsteam": "napoli",
+		"player": "IAGO",
+		"status": "playing"
+	},{
+		"vsteam": "empoli",
+		"player": "COFIE",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "GHIGLIONE",
+		"status": "bench"
+	},{
+		"vsteam": "milan",
+		"player": "ALBERTAZZI",
+		"status": "unavailable"
+	},{
+		"vsteam": "milan",
+		"player": "RICCARDI",
+		"status": "unavailable"
+	},{
+		"vsteam": "napoli",
+		"player": "GYOMBER",
+		"status": "bench"
+	},{
+		"vsteam": "udinese",
+		"player": "SANTON",
+		"status": "unavailable"
+	},{
+		"vsteam": "bologna",
+		"player": "IERARDI",
+		"status": "unavailable"
+	},{
+		"vsteam": "lazio",
+		"player": "ROCCA",
+		"status": "unavailable"
+	},{
+		"vsteam": "juventus",
+		"player": "BABACAR",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "CHRISTODOULOPOULOS",
+		"status": "bench"
+	},{
+		"vsteam": "roma",
+		"player": "STRINIC",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "MILINKOVIC-SAVIC",
+		"status": "playing"
+	},{
+		"vsteam": "atalanta",
+		"player": "BIZZARRI",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "VAZQUEZ",
+		"status": "playing"
+	},{
+		"vsteam": "palermo",
+		"player": "GUCHER",
+		"status": "bench"
+	},{
+		"vsteam": "roma",
+		"player": "ALBIOL",
+		"status": "playing"
+	},{
+		"vsteam": "inter",
+		"player": "PERICA",
+		"status": "bench"
+	},{
+		"vsteam": "chievo",
+		"player": "PINILLA",
+		"status": "unavailable"
+	},{
+		"vsteam": "roma",
+		"player": "JORGINHO",
+		"status": "playing"
+	},{
+		"vsteam": "palermo",
+		"player": "GOMIS",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "CARBONERO",
+		"status": "playing"
+	},{
+		"vsteam": "udinese",
+		"player": "BROZOVIC",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "LAXALT",
+		"status": "playing"
+	},{
+		"vsteam": "inter",
+		"player": "CAMIGLIANO",
+		"status": "unavailable"
+	},{
+		"vsteam": "bologna",
+		"player": "FIGUEIRAS",
+		"status": "playing"
+	},{
+		"vsteam": "verona",
+		"player": "BALOTELLI",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "MARIO RUI",
+		"status": "playing"
+	},{
+		"vsteam": "inter",
+		"player": "WIDMER",
+		"status": "playing"
+	},{
+		"vsteam": "fiorentina",
+		"player": "PADOIN",
+		"status": "bench"
+	},{
+		"vsteam": "milan",
+		"player": "TUPTA",
+		"status": "bench"
+	},{
+		"vsteam": "chievo",
+		"player": "CHERUBIN",
+		"status": "bench"
+	},{
+		"vsteam": "empoli",
+		"player": "LETIZIA",
+		"status": "playing"
+	},{
+		"vsteam": "roma",
+		"player": "GABBIADINI",
+		"status": "unavailable"
+	},{
+		"vsteam": "udinese",
+		"player": "LJAJIC",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "BRIENZA",
+		"status": "bench"
+	},{
+		"vsteam": "fiorentina",
+		"player": "RUGANI",
+		"status": "bench"
+	},{
+		"vsteam": "milan",
+		"player": "SALA",
+		"status": "playing"
+	},{
+		"vsteam": "juventus",
+		"player": "SUAREZ",
+		"status": "bench"
+	},{
+		"vsteam": "palermo",
+		"player": "RUSSO",
+		"status": "unavailable"
+	},{
+		"vsteam": "torino",
+		"player": "DUNCAN",
+		"status": "bench"
+	},{
+		"vsteam": "napoli",
+		"player": "DE SANCTIS",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "LULIC",
+		"status": "unavailable"
+	},{
+		"vsteam": "genoa",
+		"player": "ROSSETTINI",
+		"status": "playing"
+	},{
+		"vsteam": "inter",
+		"player": "ITURRA",
+		"status": "playing"
+	},{
+		"vsteam": "palermo",
+		"player": "PAGANINI",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "MUNOZ",
+		"status": "unavailable"
+	},{
+		"vsteam": "roma",
+		"player": "HIGUAIN",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "LA GUMINA",
+		"status": "bench"
+	},{
+		"vsteam": "inter",
+		"player": "KARNEZIS",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "GONZALEZ",
+		"status": "playing"
+	},{
+		"vsteam": "carpi",
+		"player": "ZIELINSKI",
+		"status": "playing"
+	},{
+		"vsteam": "verona",
+		"player": "BACCA",
+		"status": "bench"
+	},{
+		"vsteam": "milan",
+		"player": "ROMULO",
+		"status": "unavailable"
+	},{
+		"vsteam": "chievo",
+		"player": "CONTI",
+		"status": "unavailable"
+	},{
+		"vsteam": "lazio",
+		"player": "PUGGIONI",
+		"status": "bench"
+	},{
+		"vsteam": "milan",
+		"player": "COPPOLA",
+		"status": "bench"
+	},{
+		"vsteam": "sassuolo",
+		"player": "PRYYMA",
+		"status": "bench"
+	},{
+		"vsteam": "bologna",
+		"player": "ANSALDI",
+		"status": "playing"
+	},{
+		"vsteam": "sampdoria",
+		"player": "ONAZI",
+		"status": "unavailable"
+	},{
+		"vsteam": "sampdoria",
+		"player": "BRAAFHEID",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "MAURICIO",
+		"status": "disqualified"
+	},{
+		"vsteam": "lazio",
+		"player": "BARRETO",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "OIKONOMOU",
+		"status": "playing"
+	},{
+		"vsteam": "milan",
+		"player": "SILIGARDI",
+		"status": "playing"
+	},{
+		"vsteam": "verona",
+		"player": "ELY",
+		"status": "unavailable"
+	},{
+		"vsteam": "sassuolo",
+		"player": "GASTON SILVA",
+		"status": "unavailable"
+	},{
+		"vsteam": "napoli",
+		"player": "EMERSON",
+		"status": "bench"
+	},{
+		"vsteam": "verona",
+		"player": "DE SCIGLIO",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "MANCOSU",
+		"status": "unavailable"
+	},{
+		"vsteam": "sampdoria",
+		"player": "KEITA",
+		"status": "bench"
+	},{
+		"vsteam": "fiorentina",
+		"player": "MARCHISIO",
+		"status": "playing"
+	},{
+		"vsteam": "sassuolo",
+		"player": "BASELLI",
+		"status": "playing"
+	},{
+		"vsteam": "chievo",
+		"player": "MASIELLO",
+		"status": "bench"
+	},{
+		"vsteam": "frosinone",
+		"player": "MORGANELLA",
+		"status": "unavailable"
+	},{
+		"vsteam": "milan",
+		"player": "GOLLINI",
+		"status": "playing"
+	},{
+		"vsteam": "fiorentina",
+		"player": "ZAZA",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "DE SILVESTRI",
+		"status": "playing"
+	},{
+		"vsteam": "fiorentina",
+		"player": "HERNANES",
+		"status": "unavailable"
+	},{
+		"vsteam": "genoa",
+		"player": "KRIVICIC",
+		"status": "unavailable"
+	},{
+		"vsteam": "milan",
+		"player": "CHECCHIN",
+		"status": "bench"
+	},{
+		"vsteam": "chievo",
+		"player": "KRESIC",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "MORRISON",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "BARBA",
+		"status": "bench"
+	},{
+		"vsteam": "verona",
+		"player": "LUIZ ADRIANO",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "HILJEMARK",
+		"status": "playing"
+	},{
+		"vsteam": "verona",
+		"player": "MENEZ",
+		"status": "unavailable"
+	},{
+		"vsteam": "inter",
+		"player": "ROMO",
+		"status": "bench"
+	},{
+		"vsteam": "chievo",
+		"player": "GRASSI",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "MARCHESE",
+		"status": "unavailable"
+	},{
+		"vsteam": "juventus",
+		"player": "BORJA VALERO",
+		"status": "playing"
+	},{
+		"vsteam": "napoli",
+		"player": "ANOCIC",
+		"status": "unavailable"
+	},{
+		"vsteam": "roma",
+		"player": "CALLEJON",
+		"status": "playing"
+	},{
+		"vsteam": "milan",
+		"player": "MARQUEZ",
+		"status": "bench"
+	},{
+		"vsteam": "empoli",
+		"player": "DI GAUDIO",
+		"status": "bench"
+	},{
+		"vsteam": "torino",
+		"player": "VRSALJKO",
+		"status": "playing"
+	},{
+		"vsteam": "sassuolo",
+		"player": "AMAURI",
+		"status": "bench"
+	},{
+		"vsteam": "atalanta",
+		"player": "CACCIATORE",
+		"status": "bench"
+	},{
+		"vsteam": "napoli",
+		"player": "SALAH",
+		"status": "playing"
+	},{
+		"vsteam": "sassuolo",
+		"player": "OBI",
+		"status": "unavailable"
+	},{
+		"vsteam": "sassuolo",
+		"player": "ZAPPACOSTA",
+		"status": "playing"
+	},{
+		"vsteam": "milan",
+		"player": "SOUPRAYEN",
+		"status": "unavailable"
+	},{
+		"vsteam": "torino",
+		"player": "BERARDI",
+		"status": "disqualified"
+	},{
+		"vsteam": "lazio",
+		"player": "RODRIGUEZ",
+		"status": "bench"
+	},{
+		"vsteam": "bologna",
+		"player": "PANICO",
+		"status": "unavailable"
+	},{
+		"vsteam": "genoa",
+		"player": "FALCO",
+		"status": "unavailable"
+	},{
+		"vsteam": "sassuolo",
+		"player": "GLIK",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "UJKANI",
+		"status": "bench"
+	},{
+		"vsteam": "genoa",
+		"player": "MIRANTE",
+		"status": "playing"
+	},{
+		"vsteam": "udinese",
+		"player": "PALACIO",
+		"status": "bench"
+	},{
+		"vsteam": "fiorentina",
+		"player": "BARZAGLI",
+		"status": "playing"
+	},{
+		"vsteam": "fiorentina",
+		"player": "LEMINA",
+		"status": "bench"
+	},{
+		"vsteam": "juventus",
+		"player": "IAKOVENKO",
+		"status": "unavailable"
+	},{
+		"vsteam": "inter",
+		"player": "PIRIS",
+		"status": "playing"
+	},{
+		"vsteam": "fiorentina",
+		"player": "POGBA",
+		"status": "playing"
+	},{
+		"vsteam": "sampdoria",
+		"player": "MARCHETTI",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "GAKPÉ",
+		"status": "playing"
+	},{
+		"vsteam": "udinese",
+		"player": "ICARDI",
+		"status": "playing"
+	},{
+		"vsteam": "chievo",
+		"player": "MIGLIACCIO",
+		"status": "disqualified"
+	},{
+		"vsteam": "empoli",
+		"player": "BORRIELLO",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "CHOCHEV",
+		"status": "playing"
+	},{
+		"vsteam": "udinese",
+		"player": "BALDINI",
+		"status": "unavailable"
+	},{
+		"vsteam": "bologna",
+		"player": "TAMBÉ",
+		"status": "unavailable"
+	},{
+		"vsteam": "torino",
+		"player": "MISSIROLI",
+		"status": "playing"
+	},{
+		"vsteam": "napoli",
+		"player": "LOBONT",
+		"status": "unavailable"
+	},{
+		"vsteam": "empoli",
+		"player": "INIGUEZ",
+		"status": "unavailable"
+	},{
+		"vsteam": "sampdoria",
+		"player": "KISHNA",
+		"status": "unavailable"
+	},{
+		"vsteam": "genoa",
+		"player": "MASINA",
+		"status": "disqualified"
+	},{
+		"vsteam": "verona",
+		"player": "ABATE",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "MBAYE",
+		"status": "bench"
+	},{
+		"vsteam": "torino",
+		"player": "CONSIGLI",
+		"status": "playing"
+	},{
+		"vsteam": "empoli",
+		"player": "BELEC",
+		"status": "playing"
+	},{
+		"vsteam": "roma",
+		"player": "VALDIFIORI",
+		"status": "bench"
+	},{
+		"vsteam": "palermo",
+		"player": "LONGO",
+		"status": "unavailable"
+	},{
+		"vsteam": "fiorentina",
+		"player": "DYBALA",
+		"status": "playing"
+	},{
+		"vsteam": "empoli",
+		"player": "MBAKOGU",
+		"status": "bench"
+	},{
+		"vsteam": "empoli",
+		"player": "WILCZEK",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "REGINI",
+		"status": "playing"
+	},{
+		"vsteam": "napoli",
+		"player": "RÜDIGER",
+		"status": "playing"
+	},{
+		"vsteam": "inter",
+		"player": "BADU",
+		"status": "bench"
+	},{
+		"vsteam": "genoa",
+		"player": "GIACCHERINI",
+		"status": "unavailable"
+	},{
+		"vsteam": "milan",
+		"player": "BADAN",
+		"status": "bench"
+	},{
+		"vsteam": "chievo",
+		"player": "D'ALESSANDRO",
+		"status": "bench"
+	},{
+		"vsteam": "milan",
+		"player": "MATUZALEM",
+		"status": "unavailable"
+	},{
+		"vsteam": "atalanta",
+		"player": "MPOKU",
+		"status": "bench"
+	},{
+		"vsteam": "juventus",
+		"player": "KALINIC",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "RINCON",
+		"status": "playing"
+	},{
+		"vsteam": "empoli",
+		"player": "MARTINHO",
+		"status": "playing"
+	},{
+		"vsteam": "napoli",
+		"player": "FLORENZI",
+		"status": "playing"
+	},{
+		"vsteam": "chievo",
+		"player": "STENDARDO",
+		"status": "bench"
+	},{
+		"vsteam": "empoli",
+		"player": "LASAGNA",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "ALASTRA",
+		"status": "bench"
+	},{
+		"vsteam": "genoa",
+		"player": "SARR",
+		"status": "unavailable"
+	},{
+		"vsteam": "palermo",
+		"player": "LEALI",
+		"status": "playing"
+	},{
+		"vsteam": "juventus",
+		"player": "BAEZ",
+		"status": "unavailable"
+	},{
+		"vsteam": "chievo",
+		"player": "DRAMÉ",
+		"status": "unavailable"
+	},{
+		"vsteam": "roma",
+		"player": "HYSAJ",
+		"status": "playing"
+	},{
+		"vsteam": "carpi",
+		"player": "BITTANTE",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "BERISHA",
+		"status": "bench"
+	},{
+		"vsteam": "sassuolo",
+		"player": "MAXI LOPEZ",
+		"status": "bench"
+	},{
+		"vsteam": "bologna",
+		"player": "DE MAIO",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "HOEDT",
+		"status": "playing"
+	},{
+		"vsteam": "sampdoria",
+		"player": "GUERRIERI",
+		"status": "bench"
+	},{
+		"vsteam": "verona",
+		"player": "DE JONG",
+		"status": "unavailable"
+	},{
+		"vsteam": "atalanta",
+		"player": "BRESSAN",
+		"status": "bench"
+	},{
+		"vsteam": "udinese",
+		"player": "HANDANOVIC",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "QUAISON",
+		"status": "bench"
+	},{
+		"vsteam": "palermo",
+		"player": "GORI",
+		"status": "playing"
+	},{
+		"vsteam": "chievo",
+		"player": "RAIMONDI",
+		"status": "playing"
+	},{
+		"vsteam": "sampdoria",
+		"player": "BIGLIA",
+		"status": "playing"
+	},{
+		"vsteam": "fiorentina",
+		"player": "RUBINHO",
+		"status": "bench"
+	},{
+		"vsteam": "frosinone",
+		"player": "SORRENTINO",
+		"status": "playing"
+	},{
+		"vsteam": "roma",
+		"player": "GABRIEL",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "CATALDI",
+		"status": "playing"
+	},{
+		"vsteam": "milan",
+		"player": "TONI",
+		"status": "playing"
+	},{
+		"vsteam": "napoli",
+		"player": "TOROSIDIS",
+		"status": "unavailable"
+	},{
+		"vsteam": "carpi",
+		"player": "PUGLIESI",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "SORIANO",
+		"status": "playing"
+	},{
+		"vsteam": "carpi",
+		"player": "MCHEDLIDZE",
+		"status": "unavailable"
+	},{
+		"vsteam": "udinese",
+		"player": "NAGATOMO",
+		"status": "playing"
+	},{
+		"vsteam": "torino",
+		"player": "PELUSO",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "EL KAOUTARI",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "FELIPE ANDERSON",
+		"status": "bench"
+	},{
+		"vsteam": "juventus",
+		"player": "REBIC",
+		"status": "bench"
+	},{
+		"vsteam": "inter",
+		"player": "LODI",
+		"status": "playing"
+	},{
+		"vsteam": "palermo",
+		"player": "CASTILLO",
+		"status": "bench"
+	},{
+		"vsteam": "inter",
+		"player": "MERKEL",
+		"status": "unavailable"
+	},{
+		"vsteam": "sassuolo",
+		"player": "BENASSI",
+		"status": "bench"
+	},{
+		"vsteam": "verona",
+		"player": "ROMAGNOLI",
+		"status": "playing"
+	},{
+		"vsteam": "verona",
+		"player": "NOCERINO",
+		"status": "bench"
+	},{
+		"vsteam": "frosinone",
+		"player": "PIRRELLO",
+		"status": "unavailable"
+	},{
+		"vsteam": "palermo",
+		"player": "ROSI",
+		"status": "playing"
+	},{
+		"vsteam": "inter",
+		"player": "EDENILSON",
+		"status": "playing"
+	},{
+		"vsteam": "torino",
+		"player": "FALCINELLI",
+		"status": "bench"
+	},{
+		"vsteam": "torino",
+		"player": "FONTANESI",
+		"status": "bench"
+	},{
+		"vsteam": "atalanta",
+		"player": "HETEMAJ",
+		"status": "playing"
+	},{
+		"vsteam": "milan",
+		"player": "HALLFREDSSON",
+		"status": "disqualified"
+	},{
+		"vsteam": "chievo",
+		"player": "PALETTA",
+		"status": "playing"
+	},{
+		"vsteam": "juventus",
+		"player": "VECINO",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "ANDELKOVIC",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "PIU",
+		"status": "bench"
+	},{
+		"vsteam": "frosinone",
+		"player": "DJURDJEVIC",
+		"status": "unavailable"
+	},{
+		"vsteam": "atalanta",
+		"player": "IZCO",
+		"status": "unavailable"
+	},{
+		"vsteam": "torino",
+		"player": "DEFREL",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "PAVOLETTI",
+		"status": "disqualified"
+	},{
+		"vsteam": "chievo",
+		"player": "TULISSI",
+		"status": "bench"
+	},{
+		"vsteam": "verona",
+		"player": "ANTONELLI",
+		"status": "unavailable"
+	},{
+		"vsteam": "fiorentina",
+		"player": "MANDZUKIC",
+		"status": "playing"
+	},{
+		"vsteam": "udinese",
+		"player": "GNOUKOURI",
+		"status": "bench"
+	},{
+		"vsteam": "napoli",
+		"player": "NAINGGOLAN",
+		"status": "playing"
+	},{
+		"vsteam": "sassuolo",
+		"player": "CASTELLAZZI",
+		"status": "bench"
+	},{
+		"vsteam": "milan",
+		"player": "VIVIANI",
+		"status": "playing"
+	},{
+		"vsteam": "atalanta",
+		"player": "GAMBERINI",
+		"status": "playing"
+	},{
+		"vsteam": "torino",
+		"player": "TERRANOVA",
+		"status": "unavailable"
+	},{
+		"vsteam": "atalanta",
+		"player": "SECULIN",
+		"status": "bench"
+	},{
+		"vsteam": "genoa",
+		"player": "CRISETIG",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "VIVIANO",
+		"status": "playing"
+	},{
+		"vsteam": "chievo",
+		"player": "MORALEZ",
+		"status": "playing"
+	},{
+		"vsteam": "roma",
+		"player": "LUPERTO",
+		"status": "unavailable"
+	},{
+		"vsteam": "genoa",
+		"player": "DIAWARA",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "PULZETTI",
+		"status": "unavailable"
+	},{
+		"vsteam": "napoli",
+		"player": "CASTAN",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "KLOSE",
+		"status": "playing"
+	},{
+		"vsteam": "torino",
+		"player": "FLOCCARI",
+		"status": "playing"
+	},{
+		"vsteam": "empoli",
+		"player": "FEDELE",
+		"status": "unavailable"
+	},{
+		"vsteam": "udinese",
+		"player": "BERNI",
+		"status": "bench"
+	},{
+		"vsteam": "roma",
+		"player": "DE GUZMAN",
+		"status": "unavailable"
+	},{
+		"vsteam": "napoli",
+		"player": "TOTTI",
+		"status": "unavailable"
+	},{
+		"vsteam": "lazio",
+		"player": "EDER",
+		"status": "playing"
+	},{
+		"vsteam": "sassuolo",
+		"player": "MARTINEZ",
+		"status": "bench"
+	},{
+		"vsteam": "chievo",
+		"player": "SPORTIELLO",
+		"status": "playing"
+	},{
+		"vsteam": "sampdoria",
+		"player": "PATRIC",
+		"status": "unavailable"
+	},{
+		"vsteam": "milan",
+		"player": "WSZOLEK",
+		"status": "playing"
+	},{
+		"vsteam": "inter",
+		"player": "DANILO",
+		"status": "disqualified"
+	},{
+		"vsteam": "fiorentina",
+		"player": "CACERES",
+		"status": "unavailable"
+	},{
+		"vsteam": "juventus",
+		"player": "DIAKHATE",
+		"status": "unavailable"
+	},{
+		"vsteam": "frosinone",
+		"player": "RISPOLI",
+		"status": "playing"
+	},{
+		"vsteam": "palermo",
+		"player": "PAVLOVIC",
+		"status": "playing"
+	},{
+		"vsteam": "atalanta",
+		"player": "PELLISSIER",
+		"status": "bench"
+	},{
+		"vsteam": "fiorentina",
+		"player": "KHEDIRA",
+		"status": "unavailable"
+	},{
+		"vsteam": "carpi",
+		"player": "COSTA",
+		"status": "playing"
+	},{
+		"vsteam": "sampdoria",
+		"player": "PRCE",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "LIVAJA",
+		"status": "playing"
+	},{
+		"vsteam": "napoli",
+		"player": "GERVINHO",
+		"status": "bench"
+	},{
+		"vsteam": "juventus",
+		"player": "BAKIC",
+		"status": "unavailable"
+	},{
+		"vsteam": "bologna",
+		"player": "CISSOKHO",
+		"status": "bench"
+	},{
+		"vsteam": "milan",
+		"player": "WINCK",
+		"status": "bench"
+	},{
+		"vsteam": "torino",
+		"player": "GAZZOLA",
+		"status": "unavailable"
+	},{
+		"vsteam": "inter",
+		"player": "PONTISSO",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "DE VRIJ",
+		"status": "unavailable"
+	},{
+		"vsteam": "sampdoria",
+		"player": "PAROLO",
+		"status": "playing"
+	},{
+		"vsteam": "verona",
+		"player": "DONNARUMMA",
+		"status": "playing"
+	},{
+		"vsteam": "empoli",
+		"player": "BENUSSI",
+		"status": "unavailable"
+	},{
+		"vsteam": "chievo",
+		"player": "DE ROON",
+		"status": "playing"
+	},{
+		"vsteam": "empoli",
+		"player": "SPOLLI",
+		"status": "bench"
+	},{
+		"vsteam": "milan",
+		"player": "HELANDER",
+		"status": "bench"
+	},{
+		"vsteam": "palermo",
+		"player": "TONEV",
+		"status": "bench"
+	},{
+		"vsteam": "juventus",
+		"player": "TATARUSANU",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "LAZAAR",
+		"status": "playing"
+	},{
+		"vsteam": "palermo",
+		"player": "FRARA",
+		"status": "bench"
+	},{
+		"vsteam": "sassuolo",
+		"player": "GAZZI",
+		"status": "bench"
+	},{
+		"vsteam": "sassuolo",
+		"player": "PADELLI",
+		"status": "playing"
+	},{
+		"vsteam": "torino",
+		"player": "POLITANO",
+		"status": "bench"
+	},{
+		"vsteam": "sassuolo",
+		"player": "MOLINARO",
+		"status": "playing"
+	},{
+		"vsteam": "atalanta",
+		"player": "N. RIGONI",
+		"status": "playing"
+	},{
+		"vsteam": "atalanta",
+		"player": "CHRISTIANSEN",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "CROCE",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "CODA",
+		"status": "unavailable"
+	},{
+		"vsteam": "genoa",
+		"player": "TAIDER",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "MOUNIER",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "DAPRELÀ",
+		"status": "unavailable"
+	},{
+		"vsteam": "palermo",
+		"player": "SAMMARCO",
+		"status": "playing"
+	},{
+		"vsteam": "verona",
+		"player": "CALABRIA",
+		"status": "bench"
+	},{
+		"vsteam": "palermo",
+		"player": "CHIBSAH",
+		"status": "unavailable"
+	},{
+		"vsteam": "verona",
+		"player": "ALEX",
+		"status": "playing"
+	},{
+		"vsteam": "empoli",
+		"player": "GINO",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "PEREIRA",
+		"status": "bench"
+	},{
+		"vsteam": "chievo",
+		"player": "DENIS",
+		"status": "playing"
+	},{
+		"vsteam": "fiorentina",
+		"player": "BONUCCI",
+		"status": "playing"
+	},{
+		"vsteam": "sampdoria",
+		"player": "KONKO",
+		"status": "bench"
+	},{
+		"vsteam": "udinese",
+		"player": "RANOCCHIA",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "PAREDES",
+		"status": "playing"
+	},{
+		"vsteam": "chievo",
+		"player": "TOLOI",
+		"status": "playing"
+	},{
+		"vsteam": "fiorentina",
+		"player": "STURARO",
+		"status": "playing"
+	},{
+		"vsteam": "inter",
+		"player": "FELIPE",
+		"status": "disqualified"
+	},{
+		"vsteam": "napoli",
+		"player": "ITURBE",
+		"status": "bench"
+	},{
+		"vsteam": "napoli",
+		"player": "NURA",
+		"status": "unavailable"
+	},{
+		"vsteam": "roma",
+		"player": "EL KADDOURI",
+		"status": "bench"
+	},{
+		"vsteam": "frosinone",
+		"player": "VITIELLO",
+		"status": "unavailable"
+	},{
+		"vsteam": "milan",
+		"player": "FARES",
+		"status": "unavailable"
+	},{
+		"vsteam": "sampdoria",
+		"player": "SECK",
+		"status": "unavailable"
+	},{
+		"vsteam": "lazio",
+		"player": "CASSANO",
+		"status": "bench"
+	},{
+		"vsteam": "juventus",
+		"player": "ROSSI",
+		"status": "bench"
+	},{
+		"vsteam": "empoli",
+		"player": "MARRONE",
+		"status": "bench"
+	},{
+		"vsteam": "chievo",
+		"player": "BRIVIO",
+		"status": "playing"
+	},{
+		"vsteam": "inter",
+		"player": "DI NATALE",
+		"status": "playing"
+	},{
+		"vsteam": "torino",
+		"player": "PELLEGRINI",
+		"status": "playing"
+	},{
+		"vsteam": "atalanta",
+		"player": "GOBBI",
+		"status": "playing"
+	},{
+		"vsteam": "juventus",
+		"player": "BADELJ",
+		"status": "playing"
+	},{
+		"vsteam": "napoli",
+		"player": "POP",
+		"status": "unavailable"
+	},{
+		"vsteam": "carpi",
+		"player": "PUCCIARELLI",
+		"status": "bench"
+	},{
+		"vsteam": "inter",
+		"player": "HEURTAUX",
+		"status": "unavailable"
+	},{
+		"vsteam": "verona",
+		"player": "MEXES",
+		"status": "bench"
+	},{
+		"vsteam": "fiorentina",
+		"player": "PEREYRA",
+		"status": "unavailable"
+	},{
+		"vsteam": "inter",
+		"player": "KONE",
+		"status": "bench"
+	},{
+		"vsteam": "empoli",
+		"player": "LOLLO",
+		"status": "playing"
+	},{
+		"vsteam": "atalanta",
+		"player": "MEGGIORINI",
+		"status": "playing"
+	},{
+		"vsteam": "lazio",
+		"player": "IVAN",
+		"status": "bench"
+	},{
+		"vsteam": "juventus",
+		"player": "BERNARDESCHI",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "MAIETTA",
+		"status": "unavailable"
+	},{
+		"vsteam": "inter",
+		"player": "MARQUINHO",
+		"status": "bench"
+	},{
+		"vsteam": "udinese",
+		"player": "D'AMBROSIO",
+		"status": "disqualified"
+	},{
+		"vsteam": "inter",
+		"player": "ADNAN",
+		"status": "bench"
+	},{
+		"vsteam": "torino",
+		"player": "LONGHI",
+		"status": "bench"
+	},{
+		"vsteam": "atalanta",
+		"player": "MATTIELLO",
+		"status": "unavailable"
+	},{
+		"vsteam": "fiorentina",
+		"player": "CHIELLINI",
+		"status": "playing"
+	},{
+		"vsteam": "fiorentina",
+		"player": "NETO",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "CASSANI",
+		"status": "bench"
+	},{
+		"vsteam": "verona",
+		"player": "DIEGO LOPEZ",
+		"status": "unavailable"
+	},{
+		"vsteam": "lazio",
+		"player": "BONAZZOLI",
+		"status": "bench"
+	},{
+		"vsteam": "napoli",
+		"player": "PONCE",
+		"status": "unavailable"
+	},{
+		"vsteam": "fiorentina",
+		"player": "LICHTSTEINER",
+		"status": "bench"
+	},{
+		"vsteam": "palermo",
+		"player": "DIAKITÉ",
+		"status": "playing"
+	},{
+		"vsteam": "udinese",
+		"player": "MURILLO",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "GASTALDELLO",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "PANDEV",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "PERIN",
+		"status": "playing"
+	},{
+		"vsteam": "empoli",
+		"player": "PASCIUTI",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "SOMMARIVA",
+		"status": "unavailable"
+	},{
+		"vsteam": "sassuolo",
+		"player": "ICHAZO",
+		"status": "bench"
+	},{
+		"vsteam": "torino",
+		"player": "ACERBI",
+		"status": "playing"
+	},{
+		"vsteam": "sassuolo",
+		"player": "BELOTTI",
+		"status": "playing"
+	},{
+		"vsteam": "verona",
+		"player": "NIANG",
+		"status": "playing"
+	},{
+		"vsteam": "roma",
+		"player": "DAVID LOPEZ",
+		"status": "bench"
+	},{
+		"vsteam": "napoli",
+		"player": "DIGNE",
+		"status": "playing"
+	},{
+		"vsteam": "palermo",
+		"player": "CARLINI",
+		"status": "bench"
+	},{
+		"vsteam": "atalanta",
+		"player": "INGLESE",
+		"status": "bench"
+	},{
+		"vsteam": "roma",
+		"player": "MAGGIO",
+		"status": "bench"
+	},{
+		"vsteam": "fiorentina",
+		"player": "EVRA",
+		"status": "playing"
+	},{
+		"vsteam": "juventus",
+		"player": "ASTORI",
+		"status": "playing"
+	},{
+		"vsteam": "milan",
+		"player": "IONITA",
+		"status": "playing"
+	},{
+		"vsteam": "atalanta",
+		"player": "DAINELLI",
+		"status": "bench"
+	},{
+		"vsteam": "inter",
+		"player": "PASQUALE",
+		"status": "bench"
+	},{
+		"vsteam": "torino",
+		"player": "BIONDINI",
+		"status": "bench"
+	},{
+		"vsteam": "verona",
+		"player": "ZAPATA",
+		"status": "bench"
+	},{
+		"vsteam": "empoli",
+		"player": "BUBNJIC",
+		"status": "unavailable"
+	},{
+		"vsteam": "chievo",
+		"player": "BASSI",
+		"status": "bench"
+	},{
+		"vsteam": "palermo",
+		"player": "DIONISI",
+		"status": "playing"
+	},{
+		"vsteam": "chievo",
+		"player": "BELLINI",
+		"status": "bench"
+	},{
+		"vsteam": "atalanta",
+		"player": "PEPE",
+		"status": "bench"
+	},{
+		"vsteam": "napoli",
+		"player": "UÇAN",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "PALOMBO",
+		"status": "playing"
+	},{
+		"vsteam": "milan",
+		"player": "JANKOVIC",
+		"status": "bench"
+	},{
+		"vsteam": "fiorentina",
+		"player": "MORATA",
+		"status": "bench"
+	},{
+		"vsteam": "sassuolo",
+		"player": "MANTOVANI",
+		"status": "unavailable"
+	},{
+		"vsteam": "atalanta",
+		"player": "FREY",
+		"status": "playing"
+	},{
+		"vsteam": "sampdoria",
+		"player": "BASTA",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "ZUCULINI",
+		"status": "unavailable"
+	},{
+		"vsteam": "bologna",
+		"player": "TACHTSIDIS",
+		"status": "unavailable"
+	},{
+		"vsteam": "frosinone",
+		"player": "GOLDANIGA",
+		"status": "playing"
+	},{
+		"vsteam": "milan",
+		"player": "PISANO",
+		"status": "playing"
+	},{
+		"vsteam": "lazio",
+		"player": "KRSTICIC",
+		"status": "unavailable"
+	},{
+		"vsteam": "torino",
+		"player": "FLORO FLORES",
+		"status": "bench"
+	},{
+		"vsteam": "milan",
+		"player": "GRECO",
+		"status": "playing"
+	},{
+		"vsteam": "roma",
+		"player": "GHOULAM",
+		"status": "playing"
+	},{
+		"vsteam": "sassuolo",
+		"player": "ACQUAH",
+		"status": "playing"
+	},{
+		"vsteam": "inter",
+		"player": "FERNANDES",
+		"status": "playing"
+	},{
+		"vsteam": "udinese",
+		"player": "CARRIZO",
+		"status": "bench"
+	},{
+		"vsteam": "napoli",
+		"player": "STROOTMAN",
+		"status": "unavailable"
+	},{
+		"vsteam": "udinese",
+		"player": "MANAJ",
+		"status": "bench"
+	},{
+		"vsteam": "bologna",
+		"player": "DZEMAILI",
+		"status": "unavailable"
+	},{
+		"vsteam": "udinese",
+		"player": "JUAN JESUS",
+		"status": "playing"
+	},{
+		"vsteam": "empoli",
+		"player": "LAZZARI",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "FERNANDO",
+		"status": "bench"
+	},{
+		"vsteam": "milan",
+		"player": "PAZZINI",
+		"status": "unavailable"
+	},{
+		"vsteam": "empoli",
+		"player": "GABRIEL SILVA",
+		"status": "bench"
+	},{
+		"vsteam": "udinese",
+		"player": "DIMARCO",
+		"status": "unavailable"
+	},{
+		"vsteam": "torino",
+		"player": "SANSONE",
+		"status": "playing"
+	},{
+		"vsteam": "inter",
+		"player": "EVANGELISTA",
+		"status": "unavailable"
+	},{
+		"vsteam": "verona",
+		"player": "MONTOLIVO",
+		"status": "playing"
+	},{
+		"vsteam": "carpi",
+		"player": "TONELLI",
+		"status": "playing"
+	},{
+		"vsteam": "sampdoria",
+		"player": "OIKONOMIDIS",
+		"status": "bench"
+	},{
+		"vsteam": "sassuolo",
+		"player": "FARNERUD",
+		"status": "unavailable"
+	},{
+		"vsteam": "udinese",
+		"player": "MIRANDA",
+		"status": "playing"
+	},{
+		"vsteam": "torino",
+		"player": "LARIBI",
+		"status": "playing"
+	},{
+		"vsteam": "roma",
+		"player": "ALLAN",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "MORLEO",
+		"status": "playing"
+	},{
+		"vsteam": "carpi",
+		"player": "DERMAKU",
+		"status": "unavailable"
+	},{
+		"vsteam": "empoli",
+		"player": "BIANCO",
+		"status": "bench"
+	},{
+		"vsteam": "inter",
+		"player": "WAGUE",
+		"status": "playing"
+	},{
+		"vsteam": "sassuolo",
+		"player": "MORETTI",
+		"status": "playing"
+	},{
+		"vsteam": "inter",
+		"player": "AGUIRRE",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "CAMPORESE",
+		"status": "bench"
+	},{
+		"vsteam": "udinese",
+		"player": "GUARIN",
+		"status": "bench"
+	},{
+		"vsteam": "inter",
+		"player": "INSUA",
+		"status": "bench"
+	},{
+		"vsteam": "roma",
+		"player": "RAFAEL",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "GENTILETTI",
+		"status": "playing"
+	},{
+		"vsteam": "roma",
+		"player": "CHIRICHES",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "DJORDJEVIC",
+		"status": "bench"
+	},{
+		"vsteam": "frosinone",
+		"player": "GILARDINO",
+		"status": "playing"
+	},{
+		"vsteam": "udinese",
+		"player": "DODÒ",
+		"status": "unavailable"
+	},{
+		"vsteam": "napoli",
+		"player": "COLE",
+		"status": "unavailable"
+	},{
+		"vsteam": "verona",
+		"player": "HONDA",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "MURIEL",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "CRIMI",
+		"status": "bench"
+	},{
+		"vsteam": "empoli",
+		"player": "ZACCARDO",
+		"status": "playing"
+	},{
+		"vsteam": "inter",
+		"player": "PERISAN",
+		"status": "unavailable"
+	},{
+		"vsteam": "udinese",
+		"player": "JOVETIC",
+		"status": "bench"
+	},{
+		"vsteam": "frosinone",
+		"player": "MARESCA",
+		"status": "unavailable"
+	},{
+		"vsteam": "juventus",
+		"player": "VERDÙ",
+		"status": "bench"
+	},{
+		"vsteam": "juventus",
+		"player": "M.FERNANDEZ",
+		"status": "bench"
+	},{
+		"vsteam": "palermo",
+		"player": "AJETI",
+		"status": "unavailable"
+	},{
+		"vsteam": "lazio",
+		"player": "BRIGNOLI",
+		"status": "bench"
+	},{
+		"vsteam": "sassuolo",
+		"player": "AVELAR",
+		"status": "bench"
+	},{
+		"vsteam": "napoli",
+		"player": "DE ROSSI",
+		"status": "playing"
+	},{
+		"vsteam": "udinese",
+		"player": "MEDEL",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "BRUGMAN",
+		"status": "playing"
+	},{
+		"vsteam": "torino",
+		"player": "ANTEI",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "MACCARONE",
+		"status": "playing"
+	},{
+		"vsteam": "carpi",
+		"player": "COSIC",
+		"status": "unavailable"
+	},{
+		"vsteam": "napoli",
+		"player": "MAICON",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "MESBAH",
+		"status": "bench"
+	},{
+		"vsteam": "roma",
+		"player": "MERTENS",
+		"status": "bench"
+	},{
+		"vsteam": "udinese",
+		"player": "FELIPE MELO",
+		"status": "playing"
+	},{
+		"vsteam": "torino",
+		"player": "CANNAVARO",
+		"status": "playing"
+	},{
+		"vsteam": "udinese",
+		"player": "KONDOGBIA",
+		"status": "bench"
+	},{
+		"vsteam": "frosinone",
+		"player": "TRAJKOVSKI",
+		"status": "playing"
+	},{
+		"vsteam": "palermo",
+		"player": "SODDIMO",
+		"status": "playing"
+	},{
+		"vsteam": "empoli",
+		"player": "WALLACE",
+		"status": "bench"
+	},{
+		"vsteam": "inter",
+		"player": "THEREAU",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "PULGAR",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "RADU",
+		"status": "playing"
+	},{
+		"vsteam": "torino",
+		"player": "MAGNANELLI",
+		"status": "unavailable"
+	},{
+		"vsteam": "sampdoria",
+		"player": "MATRI",
+		"status": "bench"
+	},{
+		"vsteam": "udinese",
+		"player": "MONTOYA",
+		"status": "bench"
+	},{
+		"vsteam": "sassuolo",
+		"player": "VIVES",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "DONSAH",
+		"status": "playing"
+	},{
+		"vsteam": "chievo",
+		"player": "ESTIGARRIBIA",
+		"status": "bench"
+	},{
+		"vsteam": "chievo",
+		"player": "RADUNOVIC",
+		"status": "bench"
+	},{
+		"vsteam": "fiorentina",
+		"player": "VITALE",
+		"status": "bench"
+	},{
+		"vsteam": "napoli",
+		"player": "CAPRADOSSI",
+		"status": "unavailable"
+	},{
+		"vsteam": "lazio",
+		"player": "ONETO",
+		"status": "unavailable"
+	},{
+		"vsteam": "milan",
+		"player": "MORAS",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "STOJANOVIC",
+		"status": "bench"
+	},{
+		"vsteam": "palermo",
+		"player": "BERTONCINI",
+		"status": "bench"
+	},{
+		"vsteam": "verona",
+		"player": "BERTOLACCI",
+		"status": "bench"
+	},{
+		"vsteam": "juventus",
+		"player": "PASQUAL",
+		"status": "bench"
+	},{
+		"vsteam": "verona",
+		"player": "CERCI",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "RIGONI",
+		"status": "unavailable"
+	},{
+		"vsteam": "frosinone",
+		"player": "JAJALO",
+		"status": "bench"
+	},{
+		"vsteam": "frosinone",
+		"player": "BOLZONI",
+		"status": "unavailable"
+	},{
+		"vsteam": "napoli",
+		"player": "SZCZESNY",
+		"status": "playing"
+	},{
+		"vsteam": "juventus",
+		"player": "GILBERTO",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "MAIELLO",
+		"status": "bench"
+	},{
+		"vsteam": "roma",
+		"player": "HAMSIK",
+		"status": "playing"
+	},{
+		"vsteam": "roma",
+		"player": "INSIGNE",
+		"status": "playing"
+	},{
+		"vsteam": "udinese",
+		"player": "TELLES",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "PARENTE",
+		"status": "unavailable"
+	},{
+		"vsteam": "sassuolo",
+		"player": "JANSSON",
+		"status": "bench"
+	},{
+		"vsteam": "palermo",
+		"player": "CRIVELLO",
+		"status": "bench"
+	},{
+		"vsteam": "chievo",
+		"player": "CARMONA",
+		"status": "unavailable"
+	},{
+		"vsteam": "bologna",
+		"player": "RICOZZI",
+		"status": "bench"
+	},{
+		"vsteam": "frosinone",
+		"player": "COLOMBI",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "MAURI",
+		"status": "bench"
+	},{
+		"vsteam": "roma",
+		"player": "CHALOBAH",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "DIOUSSÈ",
+		"status": "bench"
+	},{
+		"vsteam": "verona",
+		"player": "KUCKA",
+		"status": "playing"
+	},{
+		"vsteam": "juventus",
+		"player": "LEZZERINI",
+		"status": "bench"
+	},{
+		"vsteam": "sassuolo",
+		"player": "MAKSIMOVIC",
+		"status": "unavailable"
+	},{
+		"vsteam": "palermo",
+		"player": "D. CIOFANI",
+		"status": "playing"
+	},{
+		"vsteam": "napoli",
+		"player": "VAINQUEUR",
+		"status": "bench"
+	},{
+		"vsteam": "milan",
+		"player": "ZACCAGNI",
+		"status": "bench"
+	},{
+		"vsteam": "palermo",
+		"player": "ZAPPINO",
+		"status": "bench"
+	},{
+		"vsteam": "roma",
+		"player": "DEZI",
+		"status": "unavailable"
+	},{
+		"vsteam": "inter",
+		"player": "GUILHERME",
+		"status": "bench"
+	},{
+		"vsteam": "torino",
+		"player": "ARIAUDO",
+		"status": "bench"
+	},{
+		"vsteam": "roma",
+		"player": "KOULIBALY",
+		"status": "playing"
+	},{
+		"vsteam": "frosinone",
+		"player": "STRUNA",
+		"status": "bench"
+	},{
+		"vsteam": "empoli",
+		"player": "MATOS",
+		"status": "bench"
+	},{
+		"vsteam": "verona",
+		"player": "BONAVENTURA",
+		"status": "playing"
+	},{
+		"vsteam": "lazio",
+		"player": "NESSUNO",
+		"status": "disqualified"
+	},{
+		"vsteam": "atalanta",
+		"player": "PALOSCHI",
+		"status": "playing"
+	},{
+		"vsteam": "empoli",
+		"player": "GAGLIOLO",
+		"status": "playing"
+	},{
+		"vsteam": "chievo",
+		"player": "KURTIC",
+		"status": "playing"
+	},{
+		"vsteam": "chievo",
+		"player": "CIGARINI",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "MURGIA",
+		"status": "unavailable"
+	},{
+		"vsteam": "torino",
+		"player": "PEGOLO",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "PELAGOTTI",
+		"status": "bench"
+	},{
+		"vsteam": "napoli",
+		"player": "MANOLAS",
+		"status": "playing"
+	},{
+		"vsteam": "juventus",
+		"player": "RONCAGLIA",
+		"status": "playing"
+	},{
+		"vsteam": "palermo",
+		"player": "M. CIOFANI",
+		"status": "bench"
+	},{
+		"vsteam": "verona",
+		"player": "ABBIATI",
+		"status": "bench"
+	},{
+		"vsteam": "palermo",
+		"player": "VERDE",
+		"status": "bench"
+	},{
+		"vsteam": "verona",
+		"player": "POLI",
+		"status": "bench"
+	},{
+		"vsteam": "roma",
+		"player": "HENRIQUE",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "CORREA",
+		"status": "unavailable"
+	},{
+		"vsteam": "empoli",
+		"player": "BRKIC",
+		"status": "bench"
+	},{
+		"vsteam": "fiorentina",
+		"player": "CUADRADO",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "DESTRO",
+		"status": "playing"
+	},{
+		"vsteam": "juventus",
+		"player": "BAGADUR",
+		"status": "unavailable"
+	},{
+		"vsteam": "carpi",
+		"player": "ZAMBELLI",
+		"status": "bench"
+	},{
+		"vsteam": "genoa",
+		"player": "BRIGHI",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "LAURINI",
+		"status": "playing"
+	},{
+		"vsteam": "carpi",
+		"player": "BORGHINI",
+		"status": "unavailable"
+	},{
+		"vsteam": "genoa",
+		"player": "SILVESTRO",
+		"status": "unavailable"
+	},{
+		"vsteam": "atalanta",
+		"player": "CASTRO",
+		"status": "unavailable"
+	},{
+		"vsteam": "inter",
+		"player": "MERET",
+		"status": "bench"
+	},{
+		"vsteam": "napoli",
+		"player": "PJANIC",
+		"status": "playing"
+	},{
+		"vsteam": "juventus",
+		"player": "ILICIC",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "LAMANNA",
+		"status": "bench"
+	},{
+		"vsteam": "atalanta",
+		"player": "BIRSA",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "CECCARELLI",
+		"status": "unavailable"
+	},{
+		"vsteam": "sassuolo",
+		"player": "QUAGLIARELLA",
+		"status": "playing"
+	},{
+		"vsteam": "genoa",
+		"player": "FERRARI",
+		"status": "bench"
+	},{
+		"vsteam": "palermo",
+		"player": "BLANCHARD",
+		"status": "playing"
+	},{
+		"vsteam": "lazio",
+		"player": "SILVESTRE",
+		"status": "playing"
+	},{
+		"vsteam": "lazio",
+		"player": "MOISANDER",
+		"status": "bench"
+	},{
+		"vsteam": "milan",
+		"player": "BIANCHETTI",
+		"status": "playing"
+	},{
+		"vsteam": "empoli",
+		"player": "LIOTTI",
+		"status": "unavailable"
+	},{
+		"vsteam": "bologna",
+		"player": "NTCHAM",
+		"status": "bench"
+	},{
+		"vsteam": "bologna",
+		"player": "PEROTTI",
+		"status": "unavailable"
+	},{
+		"vsteam": "atalanta",
+		"player": "RADOVANOVIC",
+		"status": "bench"
+	},{
+		"vsteam": "juventus",
+		"player": "TOMOVIC",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "RONALDO",
+		"status": "bench"
+	},{
+		"vsteam": "sampdoria",
+		"player": "CANDREVA",
+		"status": "playing"
+	},{
+		"vsteam": "napoli",
+		"player": "SOLERI",
+		"status": "unavailable"
+	},{
+		"vsteam": "lazio",
+		"player": "SERINELLI",
+		"status": "unavailable"
+	},{
+		"vsteam": "chievo",
+		"player": "MONACHELLO",
+		"status": "bench"
+	},{
+		"vsteam": "sassuolo",
+		"player": "PRCIC",
+		"status": "bench"
+	},{
+		"vsteam": "torino",
+		"player": "POMINI",
+		"status": "bench"
+	},{
+		"vsteam": "chievo",
+		"player": "GOMEZ",
+		"status": "playing"
+	},{
+		"vsteam": "fiorentina",
+		"player": "ASAMOAH",
+		"status": "bench"
+	},{
+		"vsteam": "sassuolo",
+		"player": "BOVO",
+		"status": "playing"
+	},{
+		"vsteam": "fiorentina",
+		"player": "ALEX SANDRO",
+		"status": "bench"
+	},{
+		"vsteam": "genoa",
+		"player": "KRAFTH",
+		"status": "unavailable"
+	},{
+		"vsteam": "genoa",
+		"player": "RIZZO",
+		"status": "playing"
+	},{
+		"vsteam": "bologna",
+		"player": "TINO COSTA",
+		"status": "playing"
+	},{
+		"vsteam": "juventus",
+		"player": "SEPE",
+		"status": "bench"
+	},{
+		"vsteam": "udinese",
+		"player": "BIABIANY",
+		"status": "bench"
+	},{
+		"vsteam": "atalanta",
+		"player": "PINZI",
+		"status": "playing"
+	},{
+		"vsteam": "carpi",
+		"player": "SKORUPSKI",
+		"status": "playing"
+	},{
+		"vsteam": "napoli",
+		"player": "SADIQ",
+		"status": "bench"
+	},{
+		"vsteam": "carpi",
+		"player": "BUCHEL",
+		"status": "playing"
+	},{
+		"vsteam": "atalanta",
+		"player": "CESAR",
+		"status": "playing"
+	},{
+		"vsteam": "roma",
+		"player": "ZUNIGA",
+		"status": "unavailable"
+	},{
+		"vsteam": "napoli",
+		"player": "DZEKO",
+		"status": "playing"
+	},{
+		"vsteam": "carpi",
+		"player": "KRUNIC",
+		"status": "unavailable"
+	},{
+		"vsteam": "atalanta",
+		"player": "SARDO",
+		"status": "bench"
+	},{
+		"vsteam": "lazio",
+		"player": "ZUKANOVIC",
+		"status": "playing"
+	}],
+	"error": false
+}

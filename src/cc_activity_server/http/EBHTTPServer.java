@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.balsick.gazzettaparser.FootballParser;
-import com.balsick.gazzettaparser.FootballPlayer;
 import com.balsick.tools.communication.ClientServerGenericResult;
 import com.balsick.tools.communication.ClientServerResult;
 import com.balsick.tools.communication.JSonParser;
@@ -45,6 +44,9 @@ public class EBHTTPServer extends Thread {
 	private static final String METHOD_GET = "GET";
 	private static final String METHOD_OPTIONS = "OPTIONS";
 	private static final String ALLOWED_METHODS = METHOD_GET + "," + METHOD_OPTIONS;
+	
+	private static final String API_PATH = "/api/public";
+	private static final String API_FANTAPLAYERS = "/fantaplayers";
 
 	public void start() {
 		HttpServer server;
@@ -55,9 +57,9 @@ public class EBHTTPServer extends Thread {
 			CCActivityServer.logger.info("HTTP Server can't start");
 			return;
 		}
-		server.createContext("/selectTest", this::handleEvent);
-		server.createContext("/insertTest", this::handleEvent);
-		server.createContext("/fantaplayers", this::handleEvent);
+//		server.createContext("/selectTest", this::handleEvent);
+//		server.createContext("/insertTest", this::handleEvent);
+		server.createContext(API_PATH+API_FANTAPLAYERS, this::handleEvent);
 		server.start();
 		System.out.println("HTTP Server started");
 		CCActivityServer.logger.info("HTTP Server started");
@@ -92,30 +94,22 @@ public class EBHTTPServer extends Thread {
 						e.printStackTrace();
 					}
 					break;
-				case "/fantaplayers":
+				case API_PATH+API_FANTAPLAYERS:
 					FootballParser fp = new FootballParser();
 					System.out.println("parsing\t" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date()));
 					fp.parse();
 					System.out.println("parsed\t" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date()));
-//					List<FootballPlayer> players = fp.getPlayers(requestParameters);
-					Object players = fp.getPlayers(requestParameters);
-					if (players != null)
-						{
-//						players.keySet().forEach(System.out::println);
+					fp.setToList(requestParameters.get("options") != null && requestParameters.get("options").contains("list"));
+					Object players = fp.getPlayers(requestParameters.get("players"));
 						try {
 							result = ClientServerGenericResult.createResult(players);
+							break;
 						} catch (IllegalArgumentException ex) {
-							result = ClientServerGenericResult.createResult("");
-							result.resultType = ClientServerResult.RESULTFAIL;
 							ex.printStackTrace();
 						}
-						break;
-						}
-					else {
-						System.err.println("Nessun giocatore");
-					}
 				default:
-					result = null;
+					result = ClientServerGenericResult.createResult("");
+					result.resultType = ClientServerResult.RESULTFAIL;
 				}
 				final String responseBody = JSonParser.getJSon(result, false);
 				CCActivityServer.logger.info(responseBody);
@@ -153,8 +147,6 @@ public class EBHTTPServer extends Thread {
 				for (final String value : requestParameter[1].split("[,]", -1)) {
 					System.out.println("value = "+value);
 					final String requestParameterValue = decodeUrlComponent(value);
-	//				final String[] requestParameterValues = requestParameterValue.split("|");
-	//				parameters.addAll(Arrays.asList(requestParameterValues));
 					parameters.add(requestParameterValue);
 				}
 				requestParameters.put(requestParameterName, parameters);
